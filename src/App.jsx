@@ -84,10 +84,10 @@ const editUser = (data) =>{
     getUsers()
   }, [])
   return (
-    <main className='pt-5 px-10 max-w-[1500px] mx-auto min-h-screen flex-col text-black flex items-center'>
+    <main className='pt-5 w-[90%] mx-auto px-[0px] sm:px-10 max-w-[1500px] mx-auto min-h-screen flex-col text-black flex items-center'>
       <Header setIsShownForm={setIsShownForm}/>
       <Modal isShownForm={isShownForm} setIsShownForm={setIsShownForm} register={register} handleSubmit={handleSubmit} reset={reset} handleSubmitForm={handleSubmitForm} setIsUserIdToEdit={setIsUserIdToEdit} isUserIdToEdit={isUserIdToEdit}/>
-      <div className='mt-5 w-full grid gap-10 auto-rows-auto grid-cols-[repeat(auto-fill,minmax(320px,1fr))] justify center'>{users.map(user => <UserCard key={user.id} user={user} deleteUsers={deleteUsers} handleClickEdit={handleClickEdit} />) }</div>
+      <div className='mt-5 w-full grid gap-10 auto-rows-auto grid-cols-[repeat(auto-fill,minmax(290px,1fr))] justify center'>{users.map(user => <UserCard key={user.id} user={user} deleteUsers={deleteUsers} handleClickEdit={handleClickEdit} />) }</div>
       
     </main>
   )
